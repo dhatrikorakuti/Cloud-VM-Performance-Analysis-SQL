@@ -12,13 +12,13 @@ Objectives
 
 The project aimed to:
 
-* Clean and prepare the dataset for analysis.
-* Identify and handle missing values.
-* Validate data quality.
-* Analyze CPU, memory, power, execution time, and energy efficiency.
-* Compare resource utilization across task types, priorities, and statuses.
-* Categorize virtual machines based on utilization levels.
-* Generate actionable business insights and recommendations.
+- Clean and prepare the dataset for analysis.
+- Identify and handle missing values.
+- Validate data quality.
+- Analyze CPU, memory, power, execution time, and energy efficiency.
+- Compare resource utilization across task types, priorities, and statuses.
+- Categorize virtual machines based on utilization levels.
+- Generate actionable business insights and recommendations.
 
 ---
 
@@ -30,7 +30,7 @@ Imported the dataset
 
 Loaded the cloud virtual machine dataset into PostgreSQL.
 
- Checked data types
+Checked data types
 
 Verified that each column had the correct data type.
 
@@ -40,10 +40,10 @@ Calculated the number and percentage of missing values.
 
 Findings:
 
-* Numeric columns contained missing values.
-* Categorical columns also contained missing values.
+- Numeric columns contained missing values.
+- Categorical columns also contained missing values.
 
- Handled Missing Values
+Handled Missing Values
 
 **Numeric columns**
 
@@ -51,25 +51,25 @@ Missing values were replaced with the column mean.
 
 Columns cleaned:
 
-* CPU Usage
-* Memory Usage
-* Power Consumption
-* Execution Time
-* Energy Efficiency
+- CPU Usage
+- Memory Usage
+- Power Consumption
+- Execution Time
+- Energy Efficiency
 
 **Categorical columns**
 
 Missing values were replaced with:
 
-```text
+```
 Unknown
 ```
 
 Columns cleaned:
 
-* Task Type
-* Task Priority
-* Task Status
+- Task Type
+- Task Priority
+- Task Status
 
 VM ID Validation
 
@@ -77,33 +77,33 @@ Approximately 200,638 records had missing VM IDs.
 
 Since VM IDs uniquely identify virtual machines, those records were removed before VM-level analysis.
 
- Duplicate Check
+Duplicate Check
 
 Duplicate records were checked and none were found.
 
- Data Validation
+Data Validation
 
 Validated that:
 
-* CPU usage remained within expected limits.
-* Memory usage remained within expected limits.
-* Power consumption values were valid.
-* Execution time values were valid.
-* Energy efficiency values were valid.
+- CPU usage remained within expected limits.
+- Memory usage remained within expected limits.
+- Power consumption values were valid.
+- Execution time values were valid.
+- Energy efficiency values were valid.
 
 ---
 
 Exploratory Data Analysis
 
- Overall Resource Utilization
+Overall Resource Utilization
 
 Calculated the average values for:
 
-* CPU Usage
-* Memory Usage
-* Power Consumption
-* Execution Time
-* Energy Efficiency
+- CPU Usage
+- Memory Usage
+- Power Consumption
+- Execution Time
+- Energy Efficiency
 
 Observation:
 
@@ -115,11 +115,11 @@ Task Type Analysis
 
 Compared:
 
-* Average CPU Usage
-* Average Memory Usage
-* Average Power Consumption
-* Average Execution Time
-* Average Energy Efficiency
+- Average CPU Usage
+- Average Memory Usage
+- Average Power Consumption
+- Average Execution Time
+- Average Energy Efficiency
 
 Observation:
 
@@ -133,14 +133,13 @@ Task type has minimal influence on overall resource utilization.
 
 Task Priority Analysis
 
-
 Compared:
 
-* CPU Usage
-* Memory Usage
-* Power Consumption
-* Execution Time
-* Energy Efficiency
+- CPU Usage
+- Memory Usage
+- Power Consumption
+- Execution Time
+- Energy Efficiency
 
 Observation:
 
@@ -156,19 +155,19 @@ Task Status Analysis
 
 Analyzed:
 
-* Distribution of task statuses
-* CPU usage
-* Memory usage
-* Power consumption
-* Execution time
-* Energy efficiency
+- Distribution of task statuses
+- CPU usage
+- Memory usage
+- Power consumption
+- Execution time
+- Energy efficiency
 
 Key Findings:
 
-* Waiting: 30.02%
-* Running: 30.01%
-* Completed: 29.96%
-* Unknown: 10.02%
+- Waiting: 30.02%
+- Running: 30.01%
+- Completed: 29.96%
+- Unknown: 10.02%
 
 Business Insight:
 
@@ -182,13 +181,13 @@ Instead of relying only on averages, virtual machines were grouped into utilizat
 
 ---
 
- CPU Utilization Distribution
+CPU Utilization Distribution
 
 | Category | Percentage |
-| -------- | ---------: |
-| Medium   | 45.89% |
-| Low      | 27.06% |
-| High     | 27.05% |
+| --- | --- |
+| Medium | 45.89% |
+| Low | 27.06% |
+| High | 27.05% |
 
 Business Insight:
 
@@ -199,10 +198,10 @@ Nearly half of the virtual machines operate under moderate CPU utilization, whil
 Memory Utilization Distribution
 
 | Category | Percentage |
-| -------- | ---------: |
-| Medium   | 6.02% |
-| Low      | 27.00% |
-| High     | 26.98% |
+| --- | --- |
+| Medium | 6.02% |
+| Low | 27.00% |
+| High | 26.98% |
 
 Business Insight:
 
@@ -210,13 +209,13 @@ Memory usage is well balanced, although approximately 27% of VMs consume high me
 
 ---
 
- Power Consumption Distribution
+Power Consumption Distribution
 
 | Category | Percentage |
-| -------- | ---------: |
-| Medium   | 45.98% |
-| High     | 27.03% |
-| Low      | 26.99% |
+| --- | --- |
+| Medium | 45.98% |
+| High | 27.03% |
+| Low | 26.99% |
 
 Business Insight:
 
@@ -227,10 +226,10 @@ Most virtual machines consume moderate levels of power, while over one-quarter o
 ## Execution Time Distribution
 
 | Category | Percentage |
-| -------- | ---------: |
-| Medium   | 46.01% |
-| Low      | 27.01% |
-| High     | 26.98% |
+| --- | --- |
+| Medium | 46.01% |
+| Low | 27.01% |
+| High | 26.98% |
 
 Business Insight:
 
@@ -241,10 +240,10 @@ Execution times are generally balanced across the infrastructure, with a smaller
 Energy Efficiency Distribution
 
 | Category | Percentage |
-| -------- | ---------: |
-| Medium   | 45.95% |
-| High     | 27.52%|
-| Low      | 26.53%|
+| --- | --- |
+| Medium | 45.95% |
+| High | 27.52% |
+| Low | 26.53% |
 
 Business Insight:
 
@@ -278,11 +277,11 @@ The synthetic nature of the dataset results in relatively uniform distributions.
 
 Business Recommendations
 
-* Continuously monitor high-utilization virtual machines.
-* Improve data collection processes to reduce missing task status and VM ID values.
-* Implement workload balancing for virtual machines with sustained high CPU or memory utilization.
-* Monitor power-intensive virtual machines to improve energy efficiency and reduce operational costs.
-* Investigate low energy efficiency virtual machines to optimize resource allocation.
+- Continuously monitor high-utilization virtual machines.
+- Improve data collection processes to reduce missing task status and VM ID values.
+- Implement workload balancing for virtual machines with sustained high CPU or memory utilization.
+- Monitor power-intensive virtual machines to improve energy efficiency and reduce operational costs.
+- Investigate low energy efficiency virtual machines to optimize resource allocation.
 
 ---
 
@@ -299,3 +298,300 @@ This project demonstrated the complete SQL data analysis workflow, including dat
 
 ---
 
+Cloud Virtual Machine Performance Analysis using SQL
+
+Project Overview
+
+The objective of this project was to analyze the performance of virtual machines in a cloud computing environment using SQL. The analysis focused on identifying resource utilization patterns, evaluating task execution performance, assessing data quality, and generating business insights that can support cloud infrastructure optimization.
+
+The dataset contained 2,000,000 virtual machine records** with information on CPU usage, memory usage, power consumption, execution time, energy efficiency, task type, task priority, and task status.
+
+---
+
+Objectives
+
+The project aimed to:
+
+- Clean and prepare the dataset for analysis.
+- Identify and handle missing values.
+- Validate data quality.
+- Analyze CPU, memory, power, execution time, and energy efficiency.
+- Compare resource utilization across task types, priorities, and statuses.
+- Categorize virtual machines based on utilization levels.
+- Generate actionable business insights and recommendations.
+
+---
+
+Data Cleaning
+
+The following preprocessing steps were performed before analysis:
+
+Imported the dataset
+
+Loaded the cloud virtual machine dataset into PostgreSQL.
+
+Checked data types
+
+Verified that each column had the correct data type.
+
+Missing Value Analysis
+
+Calculated the number and percentage of missing values.
+
+Findings:
+
+- Numeric columns contained missing values.
+- Categorical columns also contained missing values.
+
+Handled Missing Values
+
+**Numeric columns**
+
+Missing values were replaced with the column mean.
+
+Columns cleaned:
+
+- CPU Usage
+- Memory Usage
+- Power Consumption
+- Execution Time
+- Energy Efficiency
+
+**Categorical columns**
+
+Missing values were replaced with:
+
+```
+Unknown
+```
+
+Columns cleaned:
+
+- Task Type
+- Task Priority
+- Task Status
+
+VM ID Validation
+
+Approximately 200,638 records had missing VM IDs.
+
+Since VM IDs uniquely identify virtual machines, those records were removed before VM-level analysis.
+
+Duplicate Check
+
+Duplicate records were checked and none were found.
+
+Data Validation
+
+Validated that:
+
+- CPU usage remained within expected limits.
+- Memory usage remained within expected limits.
+- Power consumption values were valid.
+- Execution time values were valid.
+- Energy efficiency values were valid.
+
+---
+
+Exploratory Data Analysis
+
+Overall Resource Utilization
+
+Calculated the average values for:
+
+- CPU Usage
+- Memory Usage
+- Power Consumption
+- Execution Time
+- Energy Efficiency
+
+Observation:
+
+Average utilization remained close to the middle of the available range, indicating a balanced synthetic dataset.
+
+---
+
+Task Type Analysis
+
+Compared:
+
+- Average CPU Usage
+- Average Memory Usage
+- Average Power Consumption
+- Average Execution Time
+- Average Energy Efficiency
+
+Observation:
+
+Differences among Compute, IO, and Network tasks were very small.
+
+Business Insight:
+
+Task type has minimal influence on overall resource utilization.
+
+---
+
+Task Priority Analysis
+
+Compared:
+
+- CPU Usage
+- Memory Usage
+- Power Consumption
+- Execution Time
+- Energy Efficiency
+
+Observation:
+
+High, Medium, Low, and Unknown priorities showed nearly identical averages.
+
+Business Insight:
+
+Task priority does not significantly impact resource utilization in this dataset.
+
+---
+
+Task Status Analysis
+
+Analyzed:
+
+- Distribution of task statuses
+- CPU usage
+- Memory usage
+- Power consumption
+- Execution time
+- Energy efficiency
+
+Key Findings:
+
+- Waiting: 30.02%
+- Running: 30.01%
+- Completed: 29.96%
+- Unknown: 10.02%
+
+Business Insight:
+
+The workload is evenly distributed among Waiting, Running, and Completed tasks. The Unknown category indicates missing task status values that were handled during cleaning.
+
+---
+
+Virtual Machine Resource Utilization Analysis
+
+Instead of relying only on averages, virtual machines were grouped into utilization categories.
+
+---
+
+CPU Utilization Distribution
+
+| Category | Percentage |
+| --- | --- |
+| Medium | 45.89% |
+| Low | 27.06% |
+| High | 27.05% |
+
+Business Insight:
+
+Nearly half of the virtual machines operate under moderate CPU utilization, while approximately one-quarter experience high CPU utilization and should be monitored.
+
+---
+
+Memory Utilization Distribution
+
+| Category | Percentage |
+| --- | --- |
+| Medium | 6.02% |
+| Low | 27.00% |
+| High | 26.98% |
+
+Business Insight:
+
+Memory usage is well balanced, although approximately 27% of VMs consume high memory resources.
+
+---
+
+Power Consumption Distribution
+
+| Category | Percentage |
+| --- | --- |
+| Medium | 45.98% |
+| High | 27.03% |
+| Low | 26.99% |
+
+Business Insight:
+
+Most virtual machines consume moderate levels of power, while over one-quarter operate at high power consumption levels.
+
+---
+
+## Execution Time Distribution
+
+| Category | Percentage |
+| --- | --- |
+| Medium | 46.01% |
+| Low | 27.01% |
+| High | 26.98% |
+
+Business Insight:
+
+Execution times are generally balanced across the infrastructure, with a smaller portion of VMs requiring longer execution times.
+
+---
+
+Energy Efficiency Distribution
+
+| Category | Percentage |
+| --- | --- |
+| Medium | 45.95% |
+| High | 27.52% |
+| Low | 26.53% |
+
+Business Insight:
+
+Most virtual machines maintain moderate energy efficiency, while approximately one-quarter exhibit low energy efficiency and may benefit from optimization.
+
+---
+
+Top CPU Consuming Virtual Machines
+
+Identified the top virtual machines with the highest CPU utilization.
+
+Finding:
+
+Several virtual machines reached 100% CPU utilization, indicating maximum processor usage.
+
+Recommendation:
+
+These virtual machines should be monitored for sustained CPU bottlenecks and considered for workload balancing or resource scaling.
+
+---
+
+Overall Findings
+
+The dataset required cleaning before analysis due to missing values.
+Resource utilization is generally balanced across task types, priorities, and statuses.
+Nearly **46%** of virtual machines operate under moderate resource utilization.
+Approximately **27%** of virtual machines consistently fall into the high utilization category for CPU, memory, power, execution time, and energy efficiency.
+The synthetic nature of the dataset results in relatively uniform distributions.
+
+---
+
+Business Recommendations
+
+- Continuously monitor high-utilization virtual machines.
+- Improve data collection processes to reduce missing task status and VM ID values.
+- Implement workload balancing for virtual machines with sustained high CPU or memory utilization.
+- Monitor power-intensive virtual machines to improve energy efficiency and reduce operational costs.
+- Investigate low energy efficiency virtual machines to optimize resource allocation.
+
+---
+
+Tools Used
+
+PostgreSQL – Data Cleaning and SQL Analysis
+SQL – Data Validation, Aggregation, and Business Queries
+
+---
+
+Project Summary
+
+This project demonstrated the complete SQL data analysis workflow, including data cleaning, missing value handling, exploratory data analysis, aggregation, categorization, and business insight generation. A total of **22 business questions** were answered to evaluate virtual machine performance and resource utilization in a cloud computing environment. The analysis identified balanced utilization patterns, highlighted high-resource virtual machines, and provided practical recommendations for improving cloud infrastructure efficiency.
