@@ -85,23 +85,24 @@ Business Recommendations
 
 ## Repository Structure
 
-```
+```text
 Cloud-VM-Performance-Analysis-SQL/
 
-│── Cloud_VM_Performance_Analysis.sql
-│── Cloud_VM_Performance_Report.pdf
-│── README.md
-│
 ├── Dataset/
 │     └── vm_cloud_data.csv
 │
-└── Images/
-      ├── view.png
-      ├── missing_values.png
-      ├── avg.png
-      ├── tasks.png
-      ├── vm_distributed.png
-      └── energy_eff_vm.png
+├── Query Results/
+│     ├── avg.csv
+│     ├── energy_eff_vm.csv
+│     ├── missing_values.csv
+│     ├── tasks.csv
+│     ├── view.csv
+│     └── vm_distributed.csv
+│
+├── Cloud_VM_Performance_Analysis.sql
+├── Cloud_VM_Performance_Report.pdf
+└── README.md
+```
 ```
 
 Author
