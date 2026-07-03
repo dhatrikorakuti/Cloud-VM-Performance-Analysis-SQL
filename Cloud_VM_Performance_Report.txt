@@ -1,5 +1,3 @@
-
-
 Cloud Virtual Machine Performance Analysis using SQL
 
 Project Overview
